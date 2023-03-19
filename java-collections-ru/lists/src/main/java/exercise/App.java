@@ -7,26 +7,18 @@ import java.util.List;
 // BEGIN
 public class App {
     public static boolean scrabble(String letters, String word) {
-        //String[] lettersArr = letters.toLowerCase().split("");
-        //String[] wordsArr = word.toLowerCase().split("");
+        String[] lettersArr = letters.toLowerCase().split("");
+        String[] wordsArr = word.toLowerCase().split("");
 
-        var anyWord = word.toLowerCase();
-        char[] argsArray = letters.toCharArray();
-        char[] wordArray = anyWord.toCharArray();
-        List<Character> listLetters = new ArrayList<>();
-        List<Character> listWord = new ArrayList<>();
+        List<String> wordList = new ArrayList<>(Arrays.asList(wordsArr));
+        List<String> letterList = new ArrayList<>(Arrays.asList(lettersArr));
 
-        boolean result = true;
-        for (var str: listWord) {
-            if (!listLetters.contains(str)) {
-                result = false;
-                break;
-            }
-            else  {
-                listLetters.remove(str);
+        for (var i = 0; i<lettersArr.length; i++) {
+            if (wordList.contains(lettersArr[i])) {
+                wordList.remove(lettersArr[i]);
             }
         }
-        return result;
+        return wordList.isEmpty();
     }
 }
 //END
