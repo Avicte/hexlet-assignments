@@ -13,7 +13,7 @@ public class App {
         List<String> wordList = new ArrayList<>(Arrays.asList(wordsArr));
         List<String> letterList = new ArrayList<>(Arrays.asList(lettersArr));
 
-        for (var i = 0; i<lettersArr.length; i++) {
+        for (var i = 0; i < lettersArr.length; i++) {
             if (wordList.contains(lettersArr[i])) {
                 wordList.remove(lettersArr[i]);
             }
