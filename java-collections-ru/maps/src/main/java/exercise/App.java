@@ -19,13 +19,13 @@ public class App {
         return hashText;
     }
 
-    public static String toString (Map<String, Integer> slovar) {
+    public static String toString(Map<String, Integer> slovar) {
         if (slovar.size() == 0) {
             return "{}";
         }
         var result = new StringBuilder();
         result.append("{");
-        for (String s : slovar.keySet()){
+        for (String s : slovar.keySet()) {
             result.append("\n  " + s + ": " + slovar.get(s));
         }
         result.append("\n}");
@@ -35,7 +35,7 @@ public class App {
     public static int wordCount(String[] textArr, String slovo) {
         int count = 0;
         for (var str: textArr) {
-            if (str.equals(slovo)){
+            if (str.equals(slovo)) {
                 count += 1;
             }
         }
