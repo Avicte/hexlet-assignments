@@ -12,5 +12,6 @@ public class App {
                 .count();
         return count;
     }
-    }
+}
+
 // END
